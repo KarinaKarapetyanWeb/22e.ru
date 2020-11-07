@@ -1,0 +1,152 @@
+.page-footer {
+	position: relative;
+	background-color: #15191D;
+	color: #A3A3A3;
+	text-align: center;
+}
+
+.page-footer__line-1 {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.page-footer__row-1 {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.page-footer__row-2 {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.page-footer__logo {
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
+	letter-spacing: 0.25px;
+	margin-bottom: 16px;
+}
+
+.page-footer__btn {
+	width: 190px;
+	margin: 0 auto;
+	white-space: nowrap;
+}
+
+.page-footer__nav-list {
+	display: none;
+}
+
+.page-footer__documents {
+	order: 1;
+	margin-bottom: 16px;
+}
+
+.page-footer__doc-link {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 12px;
+	line-height: 16px;
+	color: #A3A3A3;
+	text-decoration: none;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.page-footer__info {
+	order: 2;
+	font-size: 12px;
+	line-height: 16px;
+	margin: 0;
+}
+
+@media (min-width: $tablet-width)  {
+	.page-footer__info {
+		order: 1;
+		margin-bottom: 14px;
+	}
+
+	.page-footer__row-1 {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.page-footer__btn {
+		margin: 0;
+	}
+
+	.page-footer__logo {
+		margin-bottom: 0;
+	}
+
+	.page-footer__documents {
+		order: 2;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0;
+	}
+
+	.page-footer__doc-link {
+		margin-right: 25px;
+		&:last-of-type {
+			margin-right: 0px;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.page-footer__row-1 {
+		padding-top: 23px;
+		padding-bottom: 25px;
+		justify-content: flex-start;
+		align-items: baseline;
+	}
+
+	.page-footer__row-2 {
+		padding-top: 24px;
+		padding-bottom: 20px;
+	}
+
+	.page-footer__logo {
+		margin-right: 138px;
+	}
+
+	.page-footer__nav-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: 600px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: 141px;
+	}
+
+	.page-footer__nav-link {
+		text-decoration: none;
+		font-size: 12px;
+		line-height: 16px;
+		text-transform: uppercase;
+		color: #ffffff;
+		transition: 0.3s;
+		&:hover {
+	      color: #FF5722;
+	    }
+	  &:focus {
+	      color: #FF5722;
+	    }
+	}
+
+	.page-footer__nav-item {
+		margin-right: 40px;
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+}

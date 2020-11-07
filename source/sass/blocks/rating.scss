@@ -1,0 +1,29 @@
+.rating {
+	display: flex;
+	align-items: baseline;
+}
+
+.rating__stars {
+	position: relative;
+	background-image: url('../img/star.svg');
+	background-repeat: repeat-x;	
+	overflow: hidden;
+	width: 64px;
+	height: 13px;
+	margin-right: 8px;
+}
+.rating__fill-stars {
+	display: block;
+	height: 13px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../img/star-fill.svg');
+	background-repeat: repeat-x;	
+}
+
+.rating__number {
+	font-family: Museo Sans Cyrl;
+	font-weight: 500;
+	color: #EB922A;
+}

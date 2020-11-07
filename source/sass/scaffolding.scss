@@ -1,0 +1,131 @@
+@font-face {
+  font-weight: 700;
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-display:swap;
+  src: url("../fonts/PTRootUI-Bold.woff2") format("woff2"), url("../fonts/PTRootUI-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-display:swap;
+  src: url("../fonts/PTRootUI-Medium.woff2") format("woff2"), url("../fonts/PTRootUI-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-display:swap;
+  src: url("../fonts/PTRootUI-Regular.woff2") format("woff2"), url("../fonts/PTRootUI-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Museo Sans Cyrl";
+  font-style: normal;
+  font-display:swap;
+  /*src: url("../fonts/MuseoSansCyrl-700.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-700.woff") format("woff");*/
+  src: url("../fonts/MuseoSansCyrl-700.woff") format("woff");
+
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Museo Sans Cyrl";
+  font-style: normal;
+  font-display:swap;
+  /*src: url("../fonts/MuseoSansCyrl-500.woff2") format("woff2"), url("../fonts/MuseoSansCyrl-700.woff") format("woff");*/
+  src: url("../fonts/MuseoSansCyrl-700.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "Inter";
+  font-style: normal;
+  font-display:swap;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+body {
+  min-width: 320px;
+/*  width: 320px;*/
+  margin: 0;
+  padding: 0;
+  
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: "PT Root UI", "Arial", sans-serif;
+  color: #15191D;
+  font-style: normal;
+
+  background-color: #ffffff;
+}
+
+.swiper-scrollbar {
+  display: block;
+  left: 16px!important;
+  bottom: 0px!important;
+  background-color: #E5E5E5;
+}
+
+.swiper-scrollbar-drag {
+  background-color: #BABABA;
+}
+
+@media (min-width: $desktop-width) {
+  .swiper-scrollbar {
+    width: 100%!important;
+    left: 0px!important;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

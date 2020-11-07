@@ -1,0 +1,85 @@
+.about {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.about__title {
+	font-family: "Museo Sans Cyrl", "Arial", sans-serif;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 48px;
+	margin: 0;
+	margin-bottom: 18px;
+	letter-spacing: 0.25px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-shadow: 
+		-0   -1px 0   #E0E0E0,
+		 0   -1px 0   #E0E0E0,
+		-0    1px 0   #E0E0E0,
+		 0    1px 0   #E0E0E0,
+		-1px -0   0   #E0E0E0,
+		 1px -0   0   #E0E0E0,
+		-1px  0   0   #E0E0E0,
+		 1px  0   0   #E0E0E0,
+		-1px -1px 0   #E0E0E0,
+		 1px -1px 0   #E0E0E0,
+		-1px  1px 0   #E0E0E0,
+		 1px  1px 0   #E0E0E0,
+		-1px -1px 0   #E0E0E0,
+		 1px -1px 0   #E0E0E0,
+		-1px  1px 0   #E0E0E0,
+		 1px  1px 0   #E0E0E0;
+}
+
+.about__intro-text {
+	margin-bottom: 20px;
+}
+
+.about__text {
+	margin: 0;
+	margin-bottom: 16px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #E8E8E8;
+}
+
+.about__text:last-of-type {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	border-bottom: none;
+}
+
+@media (min-width: $tablet-width) {
+	.about__title {
+		text-align: center;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.about {
+		padding: 160px 72px 80px 400px;
+		position: relative;
+	}
+
+	.about__title {
+		text-align: left;
+		position: absolute;
+		top: 69px;
+		left: 16px;
+		width: 480px;
+		font-size: 72px;
+		line-height: 72px;
+		z-index: -1;
+	}
+
+	.about__intro-text {
+		margin-bottom: 40px;
+	}
+
+	.about__text {
+		font-size: 18px;
+		line-height: 27px;
+		margin-bottom: 24px;
+		padding-bottom: 24px;
+	}
+}

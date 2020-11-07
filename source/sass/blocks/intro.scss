@@ -1,0 +1,121 @@
+.intro {
+    padding-bottom: 17px;
+    background-image: url('../img/intro-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+	  background-image: url("../img/intro-bg@2x.png");
+	  background-size: cover;
+    }
+}
+
+.intro__wrapper {
+	padding-top: 180px;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 291px;
+		height: 156px;
+		top: 16px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-image: url('../img/computer.png');
+		@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+		  background-image: url("../img/computer@2x.png");
+		  background-size: 291px 156px;
+	    }
+	}
+}
+
+.intro__text {
+	font-weight: 500;
+	color: #FFFFFF;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.intro__statistics {
+	position: relative;
+	font-size: 16px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin: 0;
+	padding-left: 134px;
+	padding-bottom: 7px;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 117px;
+		height: 55px;
+		background-image: url('../img/avatars.png');
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+}
+
+.intro__statistics span {
+	color: #F53838;
+}
+
+@media (min-width: $tablet-width) {
+  .intro {	
+  	padding-bottom: 50px;
+	  background-image: url('../img/intro-bg-desktop.png');
+	  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+		 background-image: url("../img/intro-bg-desktop@2x.png");
+	  }
+  }
+
+  .intro__wrapper {
+  	padding-top: 50px;
+  	padding-right: 400px;
+  }
+
+  .intro__statistics {
+  	padding-top: 20px;
+  	padding-bottom: 15px;
+  }
+
+  .intro__wrapper {
+	position: relative;
+	&::before {
+		left: auto;
+		transform: translateX(0);
+		top: 50px;
+		right: 16px;	
+	}
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+  	padding-bottom: 87px;
+  }
+
+  .intro__wrapper {
+  	padding-top: 64px;
+  	padding-right: 580px;
+  	&::before {
+  		top: 106px;
+  		width: 557px;
+		height: 298px;
+		background-image: url('../img/computer-desktop.png');
+		@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+		  background-image: url("../img/computer-desktop@2x.png");
+		  background-size: 557px 298px;
+	    }
+  	}
+  }
+
+  .intro__text {
+  	font-size: 20px;
+	line-height: 32px;
+	margin-bottom: 55px;
+  }
+}

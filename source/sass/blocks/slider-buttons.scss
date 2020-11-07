@@ -1,0 +1,71 @@
+.slider-buttons {
+	display: none;
+}
+
+@media (min-width: $tablet-width) {
+	.slider-buttons {	
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		width: 31px;
+		height: 13px;
+	}
+
+	.slider-buttons__item {
+		display: inline-block;
+		text-shadow: none;
+		padding: 3px;
+		background-color: transparent;
+		width: 10px;
+		height: 13px;
+		cursor: pointer;	
+		border: none;
+		outline: none;
+		&:hover:not(.swiper-button-disabled)::before {
+			border-color: #E51818;
+		}
+		&:focus:not(.swiper-button-disabled)::before {
+			border-color: #E51818;
+		}
+		&::before {
+			content: "";
+			display: block;
+			width: 9px;
+			height: 9px;
+			border: solid #000000;
+			top: 0;
+			border-width: 0 3px 3px 0;
+			transition: 0.3s;
+		}
+	
+		&--next::before {
+			transform: rotate(-45deg);
+			right: 0;
+		}
+		&--prev::before {
+			transform: rotate(135deg);
+			left: 0;
+		}
+	}
+
+	.swiper-button-disabled {
+		opacity: 0.5;
+		cursor: auto;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.slider-buttons {
+		width: 45px;
+		height: 20px;
+	}
+
+	.slider-buttons__item {
+		width: 19px;
+		height: 20px;
+		&::before {
+		  width: 14px;
+		  height: 14px;
+		}
+	}
+}

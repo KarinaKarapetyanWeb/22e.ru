@@ -1,0 +1,71 @@
+.become-expert {
+	padding-top: 20px;
+	padding-bottom: 16px;
+	background-color: #F6F5FF;
+}
+
+.become-expert__title {
+	margin-bottom: 8px;
+}
+
+.become-expert__text {
+	color: #4F5665;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.become-expert__link {
+	width: 220px;
+}
+
+.become-expert__more-link {
+	margin-bottom: 16px;
+}
+
+@media (min-width: $tablet-width) {
+
+	.become-expert {
+		text-align: center;
+	}
+
+	.become-expert__link-wrapper {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+	}
+
+	.become-expert__more-link {
+		margin-bottom: 0px;
+	}
+
+	.become-expert__link {
+		margin-right: 16px;
+	}
+}
+
+@media (min-width: $desktop-width) {
+  .become-expert {
+  	padding-top: 50px;
+  	padding-bottom: 56px;
+  	text-align: left;
+  }
+
+  .become-expert__wrapper {
+  	padding-left: 398px;
+  }
+
+  .become-expert__title {
+  	margin-bottom: 20px;
+  }
+
+  .become-expert__link-wrapper {
+  	justify-content: flex-end;
+  }
+
+  .become-expert__text {
+  	font-size: 18px;
+	line-height: 27px;
+	margin-bottom: 30px;
+  }
+}
+
