@@ -35,14 +35,15 @@ function style() {
 }
 
 function script() {
-	return gulp.src(["source/js/swiper-init.js", "source/js/debounce.js", "source/js/mobile-menu.js", "source/js/tooltip.js"])
-		.pipe(concat("main.js"))
+	return gulp.src(["source/js/swiper-init.js", "source/js/debounce.js", "source/js/mobile-menu.js", "source/js/tooltip.js", "source/js/dropdown.js"])
+		// .pipe(concat("main.js"))
+		.pipe(concat("main.min.js"))
 		.pipe(gulp.dest("build/js"))
-	    .pipe(minjs({
-            ext: {
-                min: '.min.js'
-            },
-        }))
+	    // .pipe(minjs({
+     //        ext: {
+     //            min: '.min.js'
+     //        },
+     //    }))
 		.pipe(gulp.dest("build/js"));
 }
 

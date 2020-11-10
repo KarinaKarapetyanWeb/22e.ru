@@ -75,15 +75,21 @@
 	}
 }
 
-.choose__item-tooltip {
-	display: none;
+.choose__item:nth-child(3) .choose__item-tooltip::before {
+	left: 10px;
+	transform: translateX(0%) rotate(90deg);
 }
 
 .choose__tooltip-link {
+	position: relative;	
+	text-decoration: none;
+}
+
+.choose__tooltip-link-text {
 	font-family: "Museo Sans Cyrl", "Arial", sans-serif;
 	font-weight: 600;
 	color: #F53838;
-	text-decoration: none;
+	white-space: nowrap;
 	&:hover {
 		color: #E51818;
 	}
@@ -92,16 +98,45 @@
 	}
 }
 
-.choose__item:nth-child(3) .choose__tooltip-link {
+.choose__item-tooltip {
+	display: none;
+	position: relative;
+	font-size: 14px;
+	line-height: 18px;
+	color: #15191D;
+	background-color: #ffffff;
+	width: 288px;
+	padding: 20px 24px;
+	margin-top: 10px;
+	z-index: 1;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+	animation: show 1s;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 24px;
+		height: 18px;
+		top: -7px;
+		left: 50%;
+		transform: translateX(-50%) rotate(90deg);
+		transition: 0.3s;
+		background-image: url('../img/triangle.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+.choose__item-tooltip.choose__item-tooltip--show {
+	display: block;
+}
+
+.choose__item:nth-child(3) .choose__tooltip-link-text {
 	line-height: 30px;
 }
 
 .choose__link {
 	width: 190px;
-}
-
-.choose__tooltip--show {
-	display: block;
 }
 
 @media (min-width: $tablet-width) {
@@ -113,8 +148,17 @@
 		width: auto;
 	}
 
-	.choose__item:nth-child(3) .choose__tooltip-link {
+	.choose__item:nth-child(3) .choose__tooltip-link-text {
 		line-height: 18px;
+	}
+
+	.choose__item-tooltip {
+		width: auto;
+	}
+
+	.choose__item:nth-child(3) .choose__item-tooltip::before {
+		left: 50%;
+		transform: translateX(-50%) rotate(90deg);
 	}
 }
 
@@ -165,37 +209,15 @@
 		line-height: 18px;
 	}
 
-	.choose__tooltip-link:hover ~ .choose__item-tooltip,
-	.choose__tooltip-link:focus ~ .choose__item-tooltip {
-		position: absolute;
-		margin: 0;
-		display: block;
-		background-color: #ffffff;
-		width: 345px;
+	.choose__item-tooltip {
+		width: 346px;
 		padding: 24px;
-		z-index: 1;
-		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-		animation: show 1s;
-	}
-
-	.choose__item-tooltip::before {
-		content: "";
-		display: block;
 		position: absolute;
-		width: 24px;
-		height: 18px;
-		top: 12px;
-		left: -10px;
-		background-image: url('../img/triangle.svg');
-		background-repeat: no-repeat;
 	}
 
-	.choose__item:nth-child(1) .choose__tooltip-link:hover ~ .choose__item-tooltip {
-		top: 50px;
-		right: 110px;
-	}
-	.choose__item:nth-child(3) .choose__tooltip-link:hover ~ .choose__item-tooltip {
+	.choose__item .choose__item-tooltip {
+		left: 50%;
+		transform: translateX(-50%);
 		top: 100%;
-		right: 0px;
 	}
 }

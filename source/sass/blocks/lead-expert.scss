@@ -70,10 +70,13 @@
 		line-height: 27px;
 	}
 
-	.lead-expert__img {
+	.lead-expert picture {
 		grid-column-start: 2;
 		grid-row-start: 1;
 		grid-row-end: -1;
+	}
+
+	.lead-expert__img {
 		width: 558px;
 		height: 371px;
 		margin-bottom: 0;

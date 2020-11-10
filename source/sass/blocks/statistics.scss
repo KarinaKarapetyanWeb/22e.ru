@@ -1,0 +1,32 @@
+.statistics {
+	position: relative;
+	font-size: 16px;
+	line-height: 24px;
+	color: #FFFFFF;
+	margin: 0;
+	padding-left: 134px;
+	padding-bottom: 7px;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 117px;
+		height: 55px;
+		background-image: url('../img/avatars.png');
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+}
+
+.statistics span {
+	color: #F53838;
+}
+
+@media (min-width: $tablet-width) {
+	.statistics {
+	  	padding-top: 20px;
+	  	padding-bottom: 15px;
+	  }
+}

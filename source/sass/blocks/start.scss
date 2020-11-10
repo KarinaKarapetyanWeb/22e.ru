@@ -71,6 +71,15 @@
     color: #f53838;
     text-decoration: none;
     border-bottom: 1px dashed #f53838;
+    transition: 0.3s;
+    &:hover {
+    	border-bottom: 1px dashed #E51818;
+    	color: #E51818;
+    }
+    &:focus {
+    	border-bottom: 1px dashed #E51818;
+    	color: #E51818;
+    }
 }
 
 @media (min-width: $desktop-width) {

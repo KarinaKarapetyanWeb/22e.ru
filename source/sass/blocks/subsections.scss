@@ -54,13 +54,14 @@
 	color: #F53838;
 	text-decoration: none;
 	border-bottom: 1px dashed #F53838;
+	transition: 0.3s;
 	&:hover {
 		color: #E51818;
-		border-bottom: none;
+		border-bottom: 1px dashed #E51818;
 	}
 	&:focus {
 		color: #E51818;
-		border-bottom: none;
+		border-bottom: 1px dashed #E51818;
 	}
 }
 
