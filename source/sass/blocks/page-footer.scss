@@ -23,12 +23,7 @@
 
 .page-footer__logo {
 	display: block;
-	color: #ffffff;
 	text-decoration: none;
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 32px;
-	letter-spacing: 0.25px;
 	margin-bottom: 16px;
 }
 
@@ -75,6 +70,7 @@
 	.page-footer__row-1 {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	.page-footer__btn {
@@ -106,7 +102,6 @@
 		padding-top: 23px;
 		padding-bottom: 25px;
 		justify-content: flex-start;
-		align-items: baseline;
 	}
 
 	.page-footer__row-2 {
@@ -115,7 +110,7 @@
 	}
 
 	.page-footer__logo {
-		margin-right: 138px;
+		margin-right: 113px;
 	}
 
 	.page-footer__nav-list {

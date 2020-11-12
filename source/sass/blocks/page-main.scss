@@ -6,24 +6,27 @@
 	margin-bottom: 24px;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: 591px) {
 	.page-main__modal {
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 50px;
+		margin-top: 24px;
 	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.page-main--modal {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 }
 
 @media (min-width: $desktop-width) {
 	.page-main__demo--1 {
 		margin-bottom: 0px;
-	}
-
-	.page-main__modal {
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 175px;
-		margin-bottom: 128px;
 	}
 
 }

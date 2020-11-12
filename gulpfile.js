@@ -35,7 +35,7 @@ function style() {
 }
 
 function script() {
-	return gulp.src(["source/js/swiper-init.js", "source/js/debounce.js", "source/js/mobile-menu.js", "source/js/tooltip.js", "source/js/dropdown.js"])
+	return gulp.src(["source/js/swiper-init.js", "source/js/debounce.js", "source/js/mobile-menu.js", "source/js/tooltip.js", "source/js/dropdown.js", "source/js/check-form.js"])
 		// .pipe(concat("main.js"))
 		.pipe(concat("main.min.js"))
 		.pipe(gulp.dest("build/js"))
@@ -58,7 +58,7 @@ function pictureFill() {
 }
 
 function images() {
-	return gulp.src("source/img/**/*.{png,jpg,svg}")
+	return gulp.src(["source/img/**/*.{png,jpg,svg}", "!source/img/logo.svg"])
 	    .pipe(imagemin([
 	      imagemin.optipng({optimizationLevel: 3}),
 	      imagemin.jpegtran({progressive: true}),
@@ -86,6 +86,7 @@ function copy () {
 	return gulp.src([
 		"source/fonts/**/*.{woff,woff2,ttf}",
 		"source/*.html", 
+		"source/img/logo.svg", 
 		], {
 		base:"source"
 		})
@@ -93,5 +94,6 @@ function copy () {
 }
 
 gulp.task('style', style);
+gulp.task('script', script);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series(clean, copy, gulp.parallel(html, style, images, script, pictureFill)));

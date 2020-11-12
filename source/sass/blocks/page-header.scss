@@ -14,25 +14,21 @@
   text-decoration: none;
   position: relative;
   display: block;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 12px;
   margin-left: 42px;
   z-index: 5;
 }
 
-.page-header__logo--dark {
-  color: #15191D;
+.page-header__logo .img-dark {
+  display: none;
 }
 
-.page-header__text {
-  font-family: "Museo Sans Cyrl", "Arial", sans-serif;
-  font-weight: 500;
-  margin: 0;
+.page-header__logo--dark .img {
+  display: none;
 }
 
+.page-header__logo--dark .img-dark {
+  display: block;
+}
 
 @media (min-width: $tablet-width) {
   .page-header__wrapper {
@@ -49,13 +45,13 @@
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 20px;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 42px;
-    letter-spacing: 0.35px;
   }
 
-  .page-header__text {
+  .page-header__logo--dark .img {
+    display: block;
+  }
+
+  .page-header__logo--dark .img-dark {
     display: none;
   }
 }
@@ -63,7 +59,7 @@
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
     width: 1167px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 6px;
+    padding-bottom: 7px;
   }
 }
