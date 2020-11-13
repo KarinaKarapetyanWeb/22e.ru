@@ -1,9 +1,14 @@
 .modal {
+	display: none;
 	padding-top: 40px;
 	padding-bottom: 16px;
 	text-align: center;
 	background-color: #3E3291;
 	color: #ffffff;
+}
+
+.modal--show {
+	display: block;
 }
 
 .modal__wrapper {
